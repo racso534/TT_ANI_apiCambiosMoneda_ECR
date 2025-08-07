@@ -48,6 +48,7 @@ public class MonedaServicio implements IMonedaServicio {
         moneda.setId(0);
         var monedaNueva = repositorio.save(moneda);
         AWSServicio.publicarMetrica("MonedasAgregadas", 1);
+        
         return monedaNueva;
     }
 
